@@ -1,0 +1,367 @@
+@import "./base";
+
+.nav {
+  height: 8rem;
+  padding: 3.2rem;
+  @include flex(space-between, center, 0);
+
+  &__cont {
+    @include flex(center, center, 3.6rem);
+    position: relative;
+
+    &__list {
+      @include flex(center, center, 4rem);
+
+      &__item {
+        list-style: none;
+        @include flex(center, center, 0.8rem);
+
+        &--link {
+          &:link,
+          &:visited {
+            @include link(1.6rem);
+            font-weight: 500;
+            transition: all 0.3s;
+          }
+
+          &:hover,
+          &:active {
+            color: $color-black;
+          }
+        }
+
+        &--icon {
+          color: $color-gray;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__btns {
+    @include flex(center, center, 2.4rem);
+
+    &--link {
+      &:link,
+      &:visited {
+        @extend .nav__cont__list__item--link;
+      }
+
+      &:hover,
+      &:active {
+        @extend .nav__cont__list__item--link;
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+    &--icon {
+      font-size: 6rem;
+      color: $color-black;
+      cursor: pointer;
+    }
+  }
+
+  &__close {
+    display: none;
+    z-index: 999;
+
+    &--icon {
+      @extend .nav__menu--icon;
+    }
+  }
+}
+
+.header {
+  min-height: 60vh;
+  padding: 5rem 2rem 0 12rem;
+  // TEMP
+  padding-bottom: 6rem;
+  @include flex(normal, flex-end, 2.4rem);
+
+  &__content {
+    @include flex(normal, flex-start, 6rem);
+    flex-direction: column;
+
+    &--cont {
+      width: 80%;
+      @include flex(normal, flex-start, 5rem);
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    width: 90%;
+    color: $color-gray;
+    line-height: 1.5;
+  }
+
+  &__btn {
+    &:link,
+    &:visited {
+      @include link(1.6rem);
+      color: $color-white;
+      font-weight: 600;
+      padding: 1.6rem 2.4rem;
+      background-color: $color-black;
+      border: 1px solid $color-black;
+      border-radius: 1.2rem;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      background-color: transparent;
+      color: $color-black;
+    }
+  }
+
+  &__img {
+    @include flex(center, center, 0);
+
+    &--hero {
+      width: 75%;
+    }
+  }
+
+  &__features {
+    @include flex(center, center, 4rem);
+  }
+}
+
+.features__options {
+  @include list(1.4rem, 2.6rem);
+  top: 4rem;
+  left: 6rem;
+  transition: all 0.3s ease-in-out;
+
+  &__list {
+    @include flex(center, flex-start, 2rem);
+    flex-direction: column;
+
+    &--item {
+      @include flex(center, center, 1rem);
+      list-style: none;
+    }
+  }
+
+  &--link:link,
+  &--link:visited {
+    @include link(1.4rem);
+    font-weight: 500;
+  }
+}
+
+.company__options {
+  @include list(2rem, 3rem);
+  top: 4rem;
+  right: 15rem;
+  transition: all 0.3s ease-in-out;
+
+  &__list {
+    @include flex(normal, flex-start, 1.6rem);
+    flex-direction: column;
+
+    &__item {
+      list-style: none;
+
+      &--link:link,
+      &--link:visited {
+        @include link(1.5rem);
+      }
+    }
+  }
+}
+
+.rigister {
+  border: 2px solid lighten($color-gray, 20%);
+  padding: 1rem 1.4rem;
+  border-radius: 1.6rem;
+  transition: all 0.3s;
+}
+
+.rigister:hover {
+  border-color: darken($color-black, 20%);
+}
+
+// Media Quieris
+// 1200px
+@media (max-width: 75em) {
+  .header {
+    &__content {
+      &--cont {
+        width: 95%;
+      }
+    }
+
+    &__img {
+      &--hero {
+        width: 85%;
+      }
+    }
+  }
+}
+
+// 1000px
+@media (max-width: 62.5em) {
+  .header {
+    padding: 5rem 2rem 6rem 6rem;
+
+    &__content {
+      &--cont {
+        width: 95%;
+      }
+    }
+
+    &__img {
+      &--hero {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// 900px
+@media (max-width: 62.5em) {
+  .nav {
+    padding: 3.2rem 4rem 3.2rem 4rem;
+
+    &__cont {
+      &__list {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: $color-white;
+        height: 100vh;
+        width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 3rem;
+        transition: all 1s;
+        z-index: 99;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(30rem);
+      }
+    }
+    &__btns {
+      display: none;
+    }
+
+    &__menu {
+      display: block;
+    }
+  }
+
+  .header {
+    padding: 5rem 4rem 6rem 4rem;
+    @include grid(center, center, 4rem);
+    grid-template-columns: repeat(2, 1fr);
+
+    &__content {
+      grid-column: 1 / -1;
+      align-items: center;
+
+      &--cont {
+        width: 100%;
+        align-items: center;
+      }
+    }
+
+    &__text {
+      width: 48%;
+      text-align: center;
+    }
+
+    &__img {
+      grid-row: 1;
+      grid-column: 1 / -1;
+
+      &--hero {
+        width: 100%;
+      }
+    }
+  }
+
+  .features__options {
+    // TEMP
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .company__options {
+    // TEMP
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// 800px
+@media (max-width: 50em) {
+  .header__text {
+    width: 65%;
+  }
+
+  .primary__heading {
+    font-size: 6rem;
+  }
+}
+
+// 650px
+@media (max-width: 40.6em) {
+  .header__text {
+    width: 75%;
+  }
+
+  .primary__heading {
+    font-size: 4.5rem;
+  }
+}
+
+// 450px
+@media (max-width: 28.2em) {
+  .nav {
+    padding: 3.2rem 1rem 3.2rem 1.6rem;
+  }
+
+  .header {
+    padding: 5rem 1.6rem 6rem 1.6rem;
+
+    &__text {
+      width: 95%;
+    }
+
+    &__features {
+      gap: 2.4rem;
+
+      &__img {
+        width: 7.6rem;
+      }
+    }
+  }
+
+  .primary__heading {
+    font-size: 3.6rem;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.hiddenNav {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.displayBtn {
+  display: block;
+}
+
+.hiddenBtn {
+  display: none;
+}

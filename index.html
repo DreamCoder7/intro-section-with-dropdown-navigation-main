@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="src/js/script.js"></script>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__cont">
+        <img
+          src="src/images/logo.svg"
+          alt="snap logo"
+          class="nav__cont__logo"
+        />
+
+        <ul class="nav__cont__list">
+          <li class="nav__cont__list__item" id="item__feature">
+            <a href="#" class="nav__cont__list__item--link">Features</a>
+            <ion-icon
+              name="chevron-down-outline"
+              class="nav__cont__list__item--icon"
+            ></ion-icon>
+            <ion-icon
+              name="chevron-up-outline"
+              class="nav__cont__list__item--icon hidden"
+            ></ion-icon>
+          </li>
+          <li class="nav__cont__list__item" id="item__company">
+            <a href="#" class="nav__cont__list__item--link">Company</a>
+            <ion-icon
+              name="chevron-down-outline"
+              class="nav__cont__list__item--icon"
+            ></ion-icon>
+            <ion-icon
+              name="chevron-up-outline"
+              class="nav__cont__list__item--icon hidden"
+            ></ion-icon>
+          </li>
+          <li class="nav__cont__list__item">
+            <a href="#" class="nav__cont__list__item--link">Careers</a>
+          </li>
+          <li class="nav__cont__list__item">
+            <a href="#" class="nav__cont__list__item--link">About</a>
+          </li>
+        </ul>
+
+        <div class="features__options hidden">
+          <ul class="features__options__list">
+            <li class="features__options__list--item">
+              <img
+                src="src/images/icon-todo.svg"
+                alt="Icon todo"
+                class="features__options--icon"
+              />
+              <a href="#" class="features__options--link">Todo List</a>
+            </li>
+
+            <li class="features__options__list--item">
+              <img
+                src="src/images/icon-calendar.svg"
+                alt="Icon calendar"
+                class="features__options--icon"
+              />
+              <a href="#" class="features__options--link">Calendar</a>
+            </li>
+            <li class="features__options__list--item">
+              <img
+                src="src/images/icon-reminders.svg"
+                alt="Icon reminders"
+                class="features__options--icon"
+              />
+              <a href="#" class="features__options--link">Reminders</a>
+            </li>
+
+            <li class="features__options__list--item">
+              <img
+                src="src/images/icon-planning.svg"
+                alt="icon planning"
+                class="features__options--icon"
+              />
+              <a href="#" class="features__options--link">planning</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="company__options hidden">
+          <ul class="company__options__list">
+            <li class="company__options__list__item">
+              <a href="#" class="company__options__list__item--link">History</a>
+            </li>
+            <li class="company__options__list__item">
+              <a href="#" class="company__options__list__item--link"
+                >Our Team</a
+              >
+            </li>
+            <li class="company__options__list__item">
+              <a href="#" class="company__options__list__item--link">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav__btns">
+        <a href="#" class="nav__btns--link">Login</a>
+        <a href="#" class="nav__btns--link rigister">Register</a>
+      </div>
+      <div class="nav__menu" role="button">
+        <ion-icon name="menu-outline" class="nav__menu--icon"></ion-icon>
+      </div>
+      <div class="nav__close" role="button">
+        <ion-icon name="close-outline" class="nav__close--icon"></ion-icon>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="header__content">
+        <div class="header__content--cont">
+          <h1 class="primary__heading">Make remote work</h1>
+          <p class="header__text">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <a role="button" href="#" class="header__btn">Learn more</a>
+        </div>
+
+        <div class="header__features">
+          <img
+            src="src/images/client-databiz.svg"
+            alt="client-databiz"
+            class="header__features__img"
+          /><img
+            src="src/images/client-audiophile.svg"
+            alt="client-audiophile"
+            class="header__features__img"
+          /><img
+            src="src/images/client-meet.svg"
+            alt="client-meet"
+            class="header__features__img"
+          /><img
+            src="src/images/client-maker.svg"
+            alt="client-maker"
+            class="header__features__img"
+          />
+        </div>
+      </div>
+
+      <div class="header__img">
+        <img
+          src="src/images/image-hero-desktop.png"
+          alt="Hero img"
+          class="header__img--hero"
+        />
+      </div>
+    </header>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

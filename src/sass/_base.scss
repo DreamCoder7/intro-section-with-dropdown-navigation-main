@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1;
+  background-color: lighten(hsl(0, 0%, 41%), 55%);
+}
+
+.primary__heading {
+  font-size: 7rem;
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+// color
+$color-white: hsl(0, 0%, 100%);
+$color-gray: hsl(0, 0%, 41%);
+$color-black: hsl(0, 0%, 8%);
+
+// variable
+@mixin link($font-size) {
+  text-decoration: none;
+  color: $color-gray;
+  font-size: $font-size;
+}
+
+@mixin flex($justify-content, $align-items, $gap) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin grid($justify-items, $align-items, $gap) {
+  display: grid;
+  justify-items: $justify-items;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin list($paddingTopBottom, $paddingLeftRight) {
+  position: absolute;
+  padding: $paddingTopBottom $paddingLeftRight;
+  background-color: $color-white;
+  border-radius: 8px;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
