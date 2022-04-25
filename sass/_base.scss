@@ -17,6 +17,9 @@ body {
   font-size: 1.8rem;
   line-height: 1;
   background-color: lighten(hsl(0, 0%, 41%), 55%);
+
+  max-width: 144rem;
+  margin: 0 auto;
 }
 
 .primary__heading {

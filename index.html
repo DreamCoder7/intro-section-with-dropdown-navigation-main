@@ -18,18 +18,19 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/styles.css" />
-    <script defer src="src/js/script.js"></script>
+    <!-- build:js js/script.js -->
+    <script defer src="js/script.js"></script>
+    <!-- endbuild-->
+
+    <!-- build:css css/styles.css-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- endbuild -->
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
     <nav class="nav">
       <div class="nav__cont">
-        <img
-          src="src/images/logo.svg"
-          alt="snap logo"
-          class="nav__cont__logo"
-        />
+        <img src="img/logo.svg" alt="snap logo" class="nav__cont__logo" />
 
         <ul class="nav__cont__list">
           <li class="nav__cont__list__item" id="item__feature">
@@ -40,8 +41,47 @@
             ></ion-icon>
             <ion-icon
               name="chevron-up-outline"
-              class="nav__cont__list__item--icon hidden"
+              class="nav__cont__list__item--icon hiddenBtn"
             ></ion-icon>
+
+            <div class="features__options hidden">
+              <ul class="features__options__list">
+                <li class="features__options__list--item">
+                  <img
+                    src="img/icon-todo.svg"
+                    alt="Icon todo"
+                    class="features__options--icon"
+                  />
+                  <a href="#" class="features__options--link">Todo List</a>
+                </li>
+
+                <li class="features__options__list--item">
+                  <img
+                    src="img/icon-calendar.svg"
+                    alt="Icon calendar"
+                    class="features__options--icon"
+                  />
+                  <a href="#" class="features__options--link">Calendar</a>
+                </li>
+                <li class="features__options__list--item">
+                  <img
+                    src="img/icon-reminders.svg"
+                    alt="Icon reminders"
+                    class="features__options--icon"
+                  />
+                  <a href="#" class="features__options--link">Reminders</a>
+                </li>
+
+                <li class="features__options__list--item">
+                  <img
+                    src="img/icon-planning.svg"
+                    alt="icon planning"
+                    class="features__options--icon"
+                  />
+                  <a href="#" class="features__options--link">planning</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="nav__cont__list__item" id="item__company">
             <a href="#" class="nav__cont__list__item--link">Company</a>
@@ -51,8 +91,28 @@
             ></ion-icon>
             <ion-icon
               name="chevron-up-outline"
-              class="nav__cont__list__item--icon hidden"
+              class="nav__cont__list__item--icon hiddenBtn"
             ></ion-icon>
+
+            <div class="company__options hidden">
+              <ul class="company__options__list">
+                <li class="company__options__list__item">
+                  <a href="#" class="company__options__list__item--link"
+                    >History</a
+                  >
+                </li>
+                <li class="company__options__list__item">
+                  <a href="#" class="company__options__list__item--link"
+                    >Our Team</a
+                  >
+                </li>
+                <li class="company__options__list__item">
+                  <a href="#" class="company__options__list__item--link"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="nav__cont__list__item">
             <a href="#" class="nav__cont__list__item--link">Careers</a>
@@ -61,61 +121,6 @@
             <a href="#" class="nav__cont__list__item--link">About</a>
           </li>
         </ul>
-
-        <div class="features__options hidden">
-          <ul class="features__options__list">
-            <li class="features__options__list--item">
-              <img
-                src="src/images/icon-todo.svg"
-                alt="Icon todo"
-                class="features__options--icon"
-              />
-              <a href="#" class="features__options--link">Todo List</a>
-            </li>
-
-            <li class="features__options__list--item">
-              <img
-                src="src/images/icon-calendar.svg"
-                alt="Icon calendar"
-                class="features__options--icon"
-              />
-              <a href="#" class="features__options--link">Calendar</a>
-            </li>
-            <li class="features__options__list--item">
-              <img
-                src="src/images/icon-reminders.svg"
-                alt="Icon reminders"
-                class="features__options--icon"
-              />
-              <a href="#" class="features__options--link">Reminders</a>
-            </li>
-
-            <li class="features__options__list--item">
-              <img
-                src="src/images/icon-planning.svg"
-                alt="icon planning"
-                class="features__options--icon"
-              />
-              <a href="#" class="features__options--link">planning</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="company__options hidden">
-          <ul class="company__options__list">
-            <li class="company__options__list__item">
-              <a href="#" class="company__options__list__item--link">History</a>
-            </li>
-            <li class="company__options__list__item">
-              <a href="#" class="company__options__list__item--link"
-                >Our Team</a
-              >
-            </li>
-            <li class="company__options__list__item">
-              <a href="#" class="company__options__list__item--link">Blog</a>
-            </li>
-          </ul>
-        </div>
       </div>
 
       <div class="nav__btns">
@@ -128,6 +133,8 @@
       <div class="nav__close" role="button">
         <ion-icon name="close-outline" class="nav__close--icon"></ion-icon>
       </div>
+
+      <div class="overlay hidden">&nbsp;</div>
     </nav>
 
     <header class="header">
@@ -143,19 +150,19 @@
 
         <div class="header__features">
           <img
-            src="src/images/client-databiz.svg"
+            src="img/client-databiz.svg"
             alt="client-databiz"
             class="header__features__img"
           /><img
-            src="src/images/client-audiophile.svg"
+            src="img/client-audiophile.svg"
             alt="client-audiophile"
             class="header__features__img"
           /><img
-            src="src/images/client-meet.svg"
+            src="img/client-meet.svg"
             alt="client-meet"
             class="header__features__img"
           /><img
-            src="src/images/client-maker.svg"
+            src="img/client-maker.svg"
             alt="client-maker"
             class="header__features__img"
           />
@@ -164,7 +171,7 @@
 
       <div class="header__img">
         <img
-          src="src/images/image-hero-desktop.png"
+          src="img/image-hero-desktop.png"
           alt="Hero img"
           class="header__img--hero"
         />
@@ -175,7 +182,12 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a
+        target="_blank"
+        href="https://www.frontendmentor.io/profile/redstorm-hub"
+        >Abreham</a
+      >.
     </footer>
 
     <script

@@ -7,7 +7,7 @@
 
   &__cont {
     @include flex(center, center, 3.6rem);
-    position: relative;
+    // position: relative;
 
     &__list {
       @include flex(center, center, 4rem);
@@ -55,6 +55,7 @@
 
   &__menu {
     display: none;
+    z-index: 999;
     &--icon {
       font-size: 6rem;
       color: $color-black;
@@ -132,7 +133,7 @@
 .features__options {
   @include list(1.4rem, 2.6rem);
   top: 4rem;
-  left: 6rem;
+  left: -5rem;
   transition: all 0.3s ease-in-out;
 
   &__list {
@@ -153,9 +154,9 @@
 }
 
 .company__options {
-  @include list(2rem, 3rem);
+  @include list(1.8rem, 1.4rem);
   top: 4rem;
-  right: 15rem;
+  right: 0;
   transition: all 0.3s ease-in-out;
 
   &__list {
@@ -184,6 +185,20 @@
   border-color: darken($color-black, 20%);
 }
 
+#item__company,
+#item__feature {
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  transition: all 0.4s;
+}
 // Media Quieris
 // 1200px
 @media (max-width: 75em) {
@@ -236,7 +251,9 @@
         width: 50%;
         flex-direction: column;
         align-items: flex-start;
+        justify-content: flex-start;
         padding-left: 3rem;
+        padding-top: 15rem;
         transition: all 1s;
         z-index: 99;
 
@@ -252,6 +269,16 @@
     &__menu {
       display: block;
     }
+  }
+
+  .features__options,
+  .company__options {
+    left: 0rem;
+    box-shadow: 0 0 0 transparent;
+  }
+
+  .company__options {
+    width: 100%;
   }
 
   .header {
@@ -364,4 +391,8 @@
 
 .hiddenBtn {
   display: none;
+}
+
+.menuPadding {
+  padding-bottom: 15rem;
 }
