@@ -6,15 +6,9 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -30,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL here](https://www.frontendmentor.io/solutions/introsectionwithdropdownnavigationmain-using-sass-and-grunt-SJ0PfgVB9)
+- Live Site URL: [live site URL here](https://intro-section-ab.netlify.app/)
 
 ## My process
 
@@ -41,9 +35,9 @@ Users should be able to:
 - sass custom properties
 - Flexbox & Grid
 - Desktop-first workflow
+- Grunt
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@redstorm-hub](https://www.frontendmentor.io/profile/redstorm-hub)
+- Twitter - [@AbrehamNigussi3](https://twitter.com/AbrehamNigussi3?t=4SLckC1gXkx9nfhMNiXBmA&s=09)
