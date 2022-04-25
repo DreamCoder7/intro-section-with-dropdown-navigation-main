@@ -85,7 +85,7 @@
     flex-direction: column;
 
     &--cont {
-      width: 80%;
+      width: 75%;
       @include flex(normal, flex-start, 5rem);
       flex-direction: column;
     }
